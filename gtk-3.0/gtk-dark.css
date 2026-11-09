@@ -1,0 +1,251 @@
+/* =============================================================================
+   VectorFlux GTK3 — Dark Theme (70s/80s Space Aesthetic)
+   Deep space blacks, warm instrument panel accents
+   ============================================================================== */
+
+/* ---------------------------------------------------------------
+   BASE COLORS — DARK MODE
+   Mirrors the GTK4 dark theme
+   --------------------------------------------------------------- */
+@define-color window_bg_color #15151a;
+@define-color view_bg_color #1c1b20;
+@define-color headerbar_bg_color #1e1d23;
+@define-color sidebar_bg_color #1a1a1f;
+@define-color card_bg_color rgba(255 255 255 / 8%);
+@define-color accent_color #e8590c;       /* Primary space accent */
+@define-color accent_bg_color #e8590c;
+@define-color accent_fg_color #ffffff;
+
+/* Palette colors (same light/dark for accent, but adjust as needed) */
+@define-color blue_color #4a90d9;
+@define-color green_color #3da868;
+@define-color yellow_color #e8b82d;
+@define-color orange_color #e8590c;
+@define-color red_color #dc4c3f;
+@define-color pink_color #d46aa0;
+@define-color purple_color #9752b6;
+@define-color teal_color #2ba8b5;
+
+/* Success, warning, error */
+@define-color success_bg_color #3da868;
+@define-color warning_bg_color #e8b82d;
+@define-color error_bg_color #dc4c3f;
+
+/* Widget foreground colors */
+@define-color bg_color #15151a;
+@define-color fg_color #f2f0ee;
+@define-color selected_bg_color #e8590c;
+@define-color selected_fg_color #ffffff;
+@define-color text_color #f2f0ee;
+@define-color base_color #1c1b20;
+
+/* Borders and shading */
+@define-color borders rgba(255 255 255 / 8%);
+@define-color shadow_color rgba(0 0 0 / 30%);
+
+/* ---------------------------------------------------------------
+   GLOBAL OVERRIDES — DARK MODE
+   Replaces the light theme colors with dark variants
+   --------------------------------------------------------------- */
+* {
+    background-color: #15151a;
+    color: #f2f0ee;
+}
+
+/* Window background — deep space black */
+window {
+    background-color: #15151a;
+    color: #f2f0ee;
+}
+
+/* ---------------------------------------------------------------
+   BUTTONS — DARK VARIANT
+   --------------------------------------------------------------- */
+button {
+    background-color: rgba(255 255 255 / 8%);
+    color: #f2f0ee;
+    border-color: rgba(255 255 255 / 10%);
+}
+
+button:hover {
+    background-color: rgba(255 255 255 / 15%);
+}
+
+button:active {
+    background-color: rgba(255 255 255 / 20%);
+}
+
+/* Flat buttons in dark mode */
+button.flat {
+    background-color: transparent;
+    color: #f2f0ee;
+}
+
+button.flat:hover {
+    background-color: rgba(255 255 255 / 10%);
+}
+
+/* Suggested action (orange) — dark mode */
+button.suggested-action {
+    background-color: #e8590c;
+    color: #ffffff;
+    border-color: #a64208;
+}
+
+button.suggested-action:hover {
+    background-color: #f06a1e;
+}
+
+/* Destructive action — dark mode */
+button.destructive-action {
+    background-color: #dc4c3f;
+    color: #ffffff;
+    border-color: #a12d25;
+}
+
+button.destructive-action:hover {
+    background-color: #e46155;
+}
+
+/* ---------------------------------------------------------------
+   HEADER BAR — DARK VARIANT
+   --------------------------------------------------------------- */
+headerbar, .titlebar {
+    background-color: #1e1d23;
+    border-bottom: 1px solid rgba(255 255 255 / 8%);
+}
+
+/* ---------------------------------------------------------------
+   ENTRY (TEXT INPUT) — DARK MODE
+   --------------------------------------------------------------- */
+entry {
+    background-color: #1c1b20;
+    color: #f2f0ee;
+    border-color: rgba(255 255 255 / 10%);
+}
+
+entry:focus {
+    border-color: #e8590c;
+    box-shadow: 0 0 0 2px rgba(232, 89, 12 / 0.3);
+}
+
+entry placeholder-text {
+    color: rgba(242 240 238 / 0.5);
+}
+
+/* ---------------------------------------------------------------
+   SCROLLBARS — DARK MODE
+   --------------------------------------------------------------- */
+scrollbar slider {
+    background-color: rgba(255 255 255 / 20%);
+}
+
+scrollbar slider:hover {
+    background-color: rgba(255 255 255 / 30%);
+}
+
+scrollbar slider:active {
+    background-color: rgba(255 255 255 / 40%);
+}
+
+/* ---------------------------------------------------------------
+   TREE VIEW — DARK MODE
+   --------------------------------------------------------------- */
+treeview, .view {
+    background-color: #1c1b20;
+    color: #f2f0ee;
+    border-color: rgba(255 255 255 / 8%);
+}
+
+treeview:selected, .view:selected {
+    background-color: rgba(232, 89, 12 / 0.3);
+    color: #f2f0ee;
+}
+
+/* ---------------------------------------------------------------
+   MENUS & POPOVERS — DARK MODE
+   --------------------------------------------------------------- */
+menubar, menu {
+    background-color: #15151a;
+    border-color: rgba(255 255 255 / 10%);
+    color: #f2f0ee;
+}
+
+menuitem:hover {
+    background-color: rgba(232, 89, 12 / 0.15);
+}
+
+popover {
+    background-color: #1a1a1f;
+    border: 1px solid rgba(255 255 255 / 10%);
+    color: #f2f0ee;
+}
+
+/* ---------------------------------------------------------------
+   SIDEBAR — DARK MODE
+   --------------------------------------------------------------- */
+.sidebar, .navigation-sidebar {
+    background-color: #1a1a1f;
+    border-right: 1px solid rgba(255 255 255 / 8%);
+    color: #f2f0ee;
+}
+
+/* ---------------------------------------------------------------
+   CARDS & FRAMES — DARK MODE
+   --------------------------------------------------------------- */
+.notebook {
+    background-color: transparent;
+    color: #f2f0ee;
+}
+
+.frame {
+    border: 1px solid rgba(255 255 255 / 8%);
+    background-color: rgba(255 255 255 / 5%);
+}
+
+/* ---------------------------------------------------------------
+   STATUS BAR — DARK MODE
+   --------------------------------------------------------------- */
+.statusbar {
+    background-color: #1e1d23;
+    border-top: 1px solid rgba(255 255 255 / 8%);
+    color: #f2f0ee;
+}
+
+/* ---------------------------------------------------------------
+   LIST BOX — DARK MODE
+   --------------------------------------------------------------- */
+listview row {
+    border-bottom-color: rgba(255 255 255 / 5%);
+    background-color: transparent;
+    color: #f2f0ee;
+}
+
+/* ---------------------------------------------------------------
+   MISC — DARK MODE OVERRIDES
+   --------------------------------------------------------------- */
+separator {
+    background-color: rgba(255 255 255 / 8%);
+}
+
+dialog > box > buttonbox > button,
+button {
+    background-color: rgba(255 255 255 / 10%);
+    color: #f2f0ee;
+}
+
+checkbutton indicator,
+radiobutton indicator {
+    background-color: rgba(255 255 255 / 15%);
+    border-color: rgba(255 255 255 / 30%);
+}
+
+progressbar trough {
+    background-color: rgba(255 255 255 / 15%);
+}
+
+/* Dark mode tooltip */
+tooltip.background {
+    background-color: rgba(40 39 46 / 0.95);
+    color: #f2f0ee;
+}

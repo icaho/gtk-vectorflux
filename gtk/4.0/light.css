@@ -1,0 +1,99 @@
+/* =============================================================================
+   VectorFlux — Light Theme (70s/80s Space Aesthetic)
+   Forked from Libadwaita defaults with reduced rounding and compact layout
+   ============================================================================== */
+
+:root {
+    /* ---------------------------------------------------------------
+       SPACE AESTHETIC CORE PALETTE
+       Warm, geometric, slightly utilitarian — think retro-futuristic dashboard
+       --------------------------------------------------------------- */
+
+    /* Accent color palette (orange-gold primary) */
+    --accent-blue: #4a90d9;
+    --accent-teal: #2ba8b5;
+    --accent-green: #3da868;
+    --accent-yellow: #e8b82d;
+    --accent-orange: #e8590c;  /* ← Primary space accent (warm instrument panel) */
+    --accent-red: #dc4c3f;
+    --accent-pink: #d46aa0;
+    --accent-purple: #9752b6;
+    --accent-slate: #7a8fa1;
+
+    /* Palette 1-5 scales (lighter to darker) */
+    --blue-1: #cddaf0; --blue-2: #9bbce3; --blue-3: #4a90d9; --blue-4: #3777c4; --blue-5: #265bac;
+
+    --teal-1: #b8eef1; --teal-2: #6adbe3; --teal-3: #2ba8b5; --teal-4: #1f90a0; --teal-5: #147685;
+
+    --green-1: #c2efda; --green-2: #7bdca5; --green-3: #3da868; --green-4: #30995b; --green-5: #1f7a46;
+
+    --yellow-1: #fcefb0; --yellow-2: #f8db6e; --yellow-3: #e8b82d; --yellow-4: #d5a022; --yellow-5: #bc831c;
+
+    --orange-1: #ffc08a; --orange-2: #ffa04f; --orange-3: #e8590c; --orange-4: #cd4600; --orange-5: #a93500;
+
+    --red-1: #fccfc9; --red-2: #f79b90; --red-3: #dc4c3f; --red-4: #c23530; --red-5: #a12425;
+
+    --pink-1: #f8cfe3; --pink-2: #f09dbe; --pink-3: #d46aa0; --pink-4: #b74b80; --pink-5: #963564;
+
+    --purple-1: #e7cbe8; --purple-2: #c690da; --purple-3: #9752b6; --purple-4: #7d3fa0; --purple-5: #612f7f;
+
+    /* Window colors — light warm grey */
+    --window-bg-color: #f3f0ea;
+    --window-fg-color: rgb(28 28 30);
+
+    /* View background (code areas, text views) — slightly cooler */
+    --view-bg-color: #ffffff;
+    --view-fg-color: rgb(45 45 48);
+
+    /* Header bar — subtle warm tone */
+    --headerbar-bg-color: #ebe7df;
+    --headerbar-fg-color: rgb(28 28 30);
+    --headerbar-border-color: rgba(0 0 0 / 15%);
+    --headerbar-backdrop-color: #f3f0ea;
+    --headerbar-shade-color: rgba(0 0 0 / 12%);
+    --headerbar-darker-shade-color: rgba(0 0 0 / 12%);
+
+    /* Sidebar */
+    --sidebar-bg-color: #eae6dc;
+    --sidebar-fg-color: rgb(28 28 30);
+    --sidebar-backdrop-color: #f3f0ea;
+    --sidebar-border-color: rgba(0 0 0 / 12%);
+    --sidebar-shade-color: rgba(0 0 0 / 12%);
+
+    /* Secondary sidebar */
+    --secondary-sidebar-bg-color: #e5e1d8;
+    --secondary-sidebar-fg-color: rgb(28 28 30);
+    --secondary-sidebar-backdrop-color: #ebe7df;
+    --secondary-sidebar-border-color: rgba(0 0 0 / 12%);
+    --secondary-sidebar-shade-color: rgba(0 0 0 / 12%);
+
+    /* Card */
+    --card-bg-color: #ffffff;
+    --card-fg-color: rgb(28 28 30);
+    --card-shade-color: rgba(0 0 0 / 15%);
+
+    /* Tab overview */
+    --overview-bg-color: #eae6dc;
+    --overview-fg-color: rgb(28 28 30);
+    --thumbnail-bg-color: #ffffff;
+    --thumbnail-fg-color: rgb(28 28 30);
+
+    /* Dialog & popover */
+    --dialog-bg-color: #f3f0ea;
+    --dialog-fg-color: rgb(28 28 30);
+    --popover-bg-color: #ffffff;
+    --popover-fg-color: rgb(45 45 48);
+    --popover-shade-color: rgba(0 0 0 / 15%);
+
+    /* Miscellaneous */
+    --shade-color: rgba(0 0 0 / 12%);
+    --scrollbar-outline-color: #ffffff;
+
+    /* Compact space aesthetic: reduced rounding, sharper corners */
+    --window-radius: 3px;  /* Default Libadwaita: 15px */
+
+    /* Border opacity — slightly more opaque for sharper look */
+    --border-opacity: 20%;
+    --dim-opacity: 50%;
+    --disabled-opacity: 40%;
+}

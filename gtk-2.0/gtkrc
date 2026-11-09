@@ -1,0 +1,280 @@
+/* =============================================================================
+   VectorFlux GTK2 — Theme (70s/80s Space Aesthetic)
+   Fallback for legacy applications
+   ============================================================================== */
+
+# ---------------------------------------------------------------
+# COLOR DEFINITIONS — LIGHT MODE
+# ---------------------------------------------------------------
+# Window colors
+color "bg_light"    = "#f3f0ea"
+color "base_light"  = "#ffffff"
+color "text_light"  = "#1c1c1e"
+color "fg_light"    = "#1c1c1e"
+color "sel_bg_light"= "#e8590c"
+color "sel_fg_light"= "#ffffff"
+
+# Header bar colors
+color "header_light" = "#ebe7df"
+
+# Accent color (orange)
+color "accent_light" = "#e8590c"
+color "button_bg_light" = "#e8590c"
+color "button_fg_light" = "#ffffff"
+
+# Border colors
+color "border_light" = "#c0bca0"
+color "dark_light"   = "#c0bca0"
+color "light_light"  = "#f3f0ea"
+
+# ---------------------------------------------------------------
+# WIDGET COLOR ASSIGNMENTS — LIGHT MODE
+# ---------------------------------------------------------------
+style "window-bg" {
+    bg[NORMAL] = $bg_light
+    bg[PRELIGHT] = #ebe6db
+    bg[ACTIVE]   = #e2ddcc
+    bg[SELECTED] = $sel_bg_light
+    bg[INSENS]   = #d8d5cc
+    
+    base[NORMAL]  = $base_light
+    base[PRELIGHT] = #f0ede4
+    base[ACTIVE]   = #ebe7df
+    base[SELECTED] = $sel_bg_light
+    base[INSENS]   = #eae6dc
+    
+    text[NORMAL]  = $text_light
+    text[PRELIGHT] = #1c1c1e
+    text[ACTIVE]   = #ffffff
+    text[SELECTED] = $sel_fg_light
+    text[INSENS]   = #9a9996
+    
+    engine gtkengine {
+        border_width = 1
+        radius = 2
+    }
+}
+
+style "headerbar" {
+    bg[NORMAL] = $header_light
+    bg[PRELIGHT] = #e3dfd5
+    bg[ACTIVE]   = #ddd9cf
+    
+    base[NORMAL] = $header_light
+    base[SELECTED] = $sel_bg_light
+    
+    text[NORMAL]  = $text_light
+    text[SELECTED] = $sel_fg_light
+}
+
+style "buttons" {
+    bg[NORMAL] = $button_bg_light
+    bg[PRELIGHT] = #f06a1e
+    bg[ACTIVE]   = #d15209
+    bg[SELECTED] = $sel_bg_light
+    
+    base[NORMAL]  = $button_bg_light
+    base[SELECTED] = $sel_bg_light
+    
+    text[NORMAL]  = $button_fg_light
+    text[SELECTED] = $sel_fg_light
+    
+    border-color = $border_light
+    
+    GtkButton-child-spacing = 4
+    GtkButton-inner-border-width = 4
+    GtkButton-default-border = 2
+    
+    engine gtkengine {
+        border_width = 1
+        radius = 2
+    }
+}
+
+style "entry" {
+    bg[NORMAL] = $base_light
+    bg[PRELIGHT] = #f0ede4
+    bg[ACTIVE]   = #ffffff
+    bg[INSENS]   = #f3f0ea
+    
+    base[NORMAL]  = $base_light
+    base[INSENS]   = #f3f0ea
+    
+    text[NORMAL]  = $text_light
+    text[INSENS]   = #9a9996
+    
+    border-color = $border_light
+    
+    entry-progress-fill-color = $sel_bg_light
+    engine gtkengine {
+        border_width = 1
+        radius = 2
+    }
+}
+
+style "scrollbar" {
+    bg[NORMAL] = $bg_light
+    bg[PRELIGHT] = #ebe6db
+    bg[ACTIVE]   = #e2ddcc
+    
+    trough-border-color = $dark_light
+    slider-border-color = $dark_light
+    
+    GtkScrollbar-min-slider-length = 40
+}
+
+style "treeview" {
+    bg[NORMAL] = $base_light
+    bg[PRELIGHT] = #f0ede4
+    bg[SELECTED] = #ffe0cc
+    
+    base[NORMAL]  = $base_light
+    base[SELECTED] = #ffe0cc
+    
+    text[NORMAL]  = $text_light
+    text[SELECTED] = $sel_fg_light
+}
+
+# ---------------------------------------------------------------
+# APPLY STYLES TO WIDGET CLASSES
+# ---------------------------------------------------------------
+class "GtkWidget" style:"window-bg"
+class "GtkWindow" style:"window-bg"
+class "GtkButton" style:"buttons"
+class "GtkEntry" style:"entry"
+class "GtkTreeView" style:"treeview"
+class "GtkScrolledWindow" style:"scrollbar"
+
+# Header bars
+class "GtkHeaderBar*" style:"headerbar"
+widget_class "*GtkToolbar*" style:"headerbar"
+
+# Apply scroll bar styling globally
+style "gtk-scrollbar" = "scrollbar"
+widget_class "*.GtkScrollbar.*.GtkRange.*.GtkSlider" style:"gtk-scrollbar"
+
+
+/* =============================================================================
+   DARK MODE VARIANT (separate color definitions)
+   Use gtk-dark.css or set dark-color-scheme in gtkrc manually
+   ============================================================================== */
+
+# ---------------------------------------------------------------
+# COLOR DEFINITIONS — DARK MODE
+# ---------------------------------------------------------------
+color "bg_dark"    = "#15151a"
+color "base_dark"  = "#1c1b20"
+color "text_dark"  = "#f2f0ee"
+color "fg_dark"    = #f2f0ee
+color "sel_bg_dark"= #e8590c
+color "sel_fg_dark"= #ffffff
+
+color "header_dark" = #1e1d23
+
+color "accent_dark" = #e8590c
+color "button_bg_dark" = #e8590c
+color "button_fg_dark" = #ffffff
+
+color "border_dark" = rgba(255 255 255 / 10%)
+color "dark_dark"   = rgba(0 0 0 / 40%)
+color "light_dark"  = rgba(255 255 255 / 20%)
+
+# Dark mode widgets (same structure, dark colors)
+style "window-bg-dark" {
+    bg[NORMAL] = $bg_dark
+    bg[PRELIGHT] = #1a191e
+    bg[ACTIVE]   = #131318
+    bg[SELECTED] = $sel_bg_dark
+    bg[INSENS]   = #2a2a30
+    
+    base[NORMAL]  = $base_dark
+    base[PRELIGHT] = #222127
+    base[ACTIVE]   = #1c1b20
+    base[SELECTED] = $sel_bg_dark
+    base[INSENS]   = #2a2a30
+    
+    text[NORMAL]  = $text_dark
+    text[PRELIGHT] = #f2f0ee
+    text[ACTIVE]   = #ffffff
+    text[SELECTED] = $sel_fg_dark
+    text[INSENS]   = #77767b
+    
+    engine gtkengine {
+        border_width = 1
+        radius = 2
+    }
+}
+
+style "headerbar-dark" {
+    bg[NORMAL] = $header_dark
+    bg[PRELIGHT] = #242329
+    bg[ACTIVE]   = #1a191e
+    
+    base[NORMAL] = $header_dark
+    base[SELECTED] = $sel_bg_dark
+    
+    text[NORMAL]  = $text_dark
+    text[SELECTED] = $sel_fg_dark
+}
+
+style "buttons-dark" {
+    bg[NORMAL] = #2c2b32
+    bg[PRELIGHT] = #39383f
+    bg[ACTIVE]   = #1e1d23
+    
+    base[NORMAL]  = #2c2b32
+    base[SELECTED] = $sel_bg_dark
+    
+    text[NORMAL]  = $text_dark
+    text[SELECTED] = $sel_fg_dark
+    
+    border-color = rgba(255 255 255 / 10%)
+    
+    GtkButton-child-spacing = 4
+    GtkButton-inner-border-width = 4
+    GtkButton-default-border = 2
+    
+    engine gtkengine {
+        border_width = 1
+        radius = 2
+    }
+}
+
+style "entry-dark" {
+    bg[NORMAL] = $base_dark
+    bg[PRELIGHT] = #222127
+    bg[ACTIVE]   = #1c1b20
+    
+    base[NORMAL]  = $base_dark
+    base[INSENS]   = #2a2a30
+    
+    text[NORMAL]  = $text_dark
+    text[INSENS]   = #77767b
+    
+    border-color = rgba(255 255 255 / 10%)
+    
+    entry-progress-fill-color = $sel_bg_dark
+    engine gtkengine {
+        border_width = 1
+        radius = 2
+    }
+}
+
+style "treeview-dark" {
+    bg[NORMAL] = $base_dark
+    bg[PRELIGHT] = #242329
+    bg[SELECTED] = rgba(232, 89, 12 / 0.25)
+    
+    base[NORMAL]  = $base_dark
+    base[SELECTED] = rgba(232, 89, 12 / 0.25)
+    
+    text[NORMAL]  = $text_dark
+    text[SELECTED] = $sel_fg_dark
+}
+
+# Dark mode widget classes
+class "GtkWidget" style:"window-bg-dark"
+class "GtkWindow" style:"window-bg-dark"
+class "GtkButton" style:"buttons-dark"
+class "GtkEntry" style:"entry-dark"
+class "GtkTreeView" style:"treeview-dark"

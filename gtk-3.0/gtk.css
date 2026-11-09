@@ -1,0 +1,435 @@
+/* =============================================================================
+   VectorFlux GTK3 — Light Theme (70s/80s Space Aesthetic)
+   Forked from Libadwaita: less rounded, more compact, sharp geometric forms
+   ============================================================================== */
+
+/* ---------------------------------------------------------------
+   BASE COLORS — LIGHT MODE
+   Mirrors the GTK4 light theme with warm retro space palette
+   --------------------------------------------------------------- */
+@define-color window_bg_color #f3f0ea;
+@define-color view_bg_color #ffffff;
+@define-color headerbar_bg_color #ebe7df;
+@define-color sidebar_bg_color #eae6dc;
+@define-color card_bg_color #ffffff;
+@define-color accent_color #e8590c;       /* Primary space accent */
+@define-color accent_bg_color #e8590c;
+@define-color accent_fg_color #ffffff;
+
+/* Additional palette colors */
+@define-color blue_color #4a90d9;
+@define-color green_color #3da868;
+@define-color yellow_color #e8b82d;
+@define-color orange_color #e8590c;
+@define-color red_color #dc4c3f;
+@define-color pink_color #d46aa0;
+@define-color purple_color #9752b6;
+@define-color teal_color #2ba8b5;
+
+/* Success, warning, error */
+@define-color success_bg_color #3da868;
+@define-color warning_bg_color #e8b82d;
+@define-color error_bg_color #dc4c3f;
+
+/* Widget foreground colors */
+@define-color bg_color #f3f0ea;
+@define-color fg_color #1c1c1e;
+@define-color selected_bg_color #e8590c;
+@define-color selected_fg_color #ffffff;
+@define-color text_color #2d2d30;
+@define_color base_color #ffffff;
+
+/* Borders and shading */
+@define-color borders rgba(0 0 0 / 15%);
+@define-color shadow_color rgba(0 0 0 / 12%);
+
+/* ---------------------------------------------------------------
+   GLOBAL STYLING — COMPACT, SHARP LOOK
+   --------------------------------------------------------------- */
+* {
+    font-family: "Sans", "Noto Sans", system-ui;
+    padding: 0;
+    
+    /* Reduce outline width for compact look */
+    outline-width: 1px;
+    outline-offset: -2px;
+}
+
+/* Window background */
+window {
+    background-color: #f3f0ea;
+    border-radius: 0;
+    margin: 0;
+}
+
+/* ---------------------------------------------------------------
+   BUTTONS — SHARP CORNERS, FLAT STYLE
+   --------------------------------------------------------------- */
+button {
+    padding: 4px 10px;
+    min-height: 26px;
+    border-radius: 2px;
+    box-shadow: none;
+    margin: 2px;
+    font-weight: 500;
+    
+    /* Slightly tighter inner spacing */
+    -GtkWidget-inner-border: 4px 6px 4px 6px;
+}
+
+button:hover {
+    background-color: rgba(232, 89, 12 / 0.1);
+    box-shadow: none;
+    transition-duration: 0.15s;
+}
+
+button:active {
+    background-color: rgba(232, 89, 12 / 0.15);
+    box-shadow: none;
+}
+
+/* Flat buttons */
+button.flat {
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    padding: 4px 6px;
+}
+
+button.flat:hover {
+    background-color: rgba(0 0 0 / 0.05);
+    border-color: transparent;
+}
+
+/* Suggested action buttons */
+button.suggested-action {
+    background-color: #e8590c;
+    color: #ffffff;
+    border-color: #b3470a;
+}
+
+button.suggested-action:hover {
+    background-color: #f06a1e;
+}
+
+button.suggested-action:active {
+    background-color: #d15209;
+}
+
+/* Destructive action buttons */
+button.destructive-action {
+    background-color: #dc4c3f;
+    color: #ffffff;
+    border-color: #b83a2f;
+}
+
+button.destructive-action:hover {
+    background-color: #e46155;
+}
+
+/* Circular buttons */
+button.circular {
+    min-width: 28px;
+    min-height: 28px;
+    padding: 0;
+    border-radius: 50%;
+}
+
+/* ---------------------------------------------------------------
+   HEADER BARS — FLAT, COMPACT HEIGHT
+   --------------------------------------------------------------- */
+headerbar, .titlebar {
+    background-color: #ebe7df;
+    border-bottom: 1px solid rgba(0 0 0 / 15%);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 0;
+}
+
+headerbar > box,
+headerbar > stack,
+headerbar > revealer > box {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+/* Title bar buttons */
+headerbar button {
+    padding: 4px 8px;
+    min-height: 24px;
+}
+
+/* ---------------------------------------------------------------
+   ENTRY (TEXT INPUT) — SHARP CORNERS, TIGHT
+   --------------------------------------------------------------- */
+entry {
+    padding: 3px 6px;
+    border-radius: 2px;
+    min-height: 28px;
+    background-color: #ffffff;
+    border-color: rgba(0 0 0 / 15%);
+    
+    /* Compact icon spacing */
+    -GtkEntry-inner-icon-spacing: 4;
+}
+
+entry:focus {
+    border-color: #e8590c;
+    box-shadow: 0 0 0 2px rgba(232, 89, 12 / 0.2);
+}
+
+entry.placeholder {
+    color: rgba(45 45 48 / 0.5);
+}
+
+/* ---------------------------------------------------------------
+   SCROLLBARS — THIN, SHARP EDGES
+   --------------------------------------------------------------- */
+scrollbar {
+    min-width: 6px;
+    min-height: 6px;
+    background-color: transparent;
+    border-color: transparent;
+    
+    -GtkScrollbar-has-backward-stepper: false;
+    -GtkScrollbar-has-forward-stepper: false;
+}
+
+scrollbar slider {
+    background-color: rgba(0 0 0 / 25%);
+    border-radius: 0;
+    min-width: 6px;
+    min-height: 40px;
+    margin: 1px;
+}
+
+scrollbar slider:hover {
+    background-color: rgba(0 0 0 / 35%);
+}
+
+scrollbar slider:active {
+    background-color: rgba(0 0 0 / 45%);
+}
+
+/* Trailing/leading arrows */
+scrollbar trough {
+    background-color: transparent;
+    border: none;
+}
+
+/* ---------------------------------------------------------------
+   TREE VIEW — COMPACT ROWS
+   --------------------------------------------------------------- */
+treeview, .view {
+    background-color: #ffffff;
+    border-color: rgba(0 0 0 / 12%);
+    
+    -GtkTreeView-expander-size: 14;
+    -GtkTreeView-indent-level: 18;
+    -GtkTreeView-row-separator-height: 0;
+}
+
+treeview:selected, .view:selected {
+    background-color: rgba(232, 89, 12 / 0.2);
+    color: #1c1c1e;
+}
+
+/* Compact list rows */
+row {
+    min-height: 26px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+/* ---------------------------------------------------------------
+   MENUS & POPOVERS — FLAT, SHARP
+   --------------------------------------------------------------- */
+menubar, menu {
+    background-color: #f3f0ea;
+    border-color: rgba(0 0 0 / 15%);
+    margin: 0;
+    padding: 4px;
+}
+
+menuitem {
+    padding: 4px 8px;
+    border-radius: 2px;
+    min-height: 26px;
+    min-width: 120px;
+}
+
+menuitem:hover {
+    background-color: rgba(232, 89, 12 / 0.1);
+}
+
+menuitem:checked {
+    color: #e8590c;
+}
+
+popover {
+    background-color: #f3f0ea;
+    border: 1px solid rgba(0 0 0 / 15%);
+    border-radius: 2px;
+    margin: 4px;
+    box-shadow: none;
+}
+
+/* ---------------------------------------------------------------
+   CARD-LIKE WIDGETS — SHARP CORNERS
+   --------------------------------------------------------------- */
+.notebook {
+    border-radius: 0;
+    background-color: transparent;
+}
+
+.frame {
+    border: 1px solid rgba(0 0 0 / 12%);
+    border-radius: 2px;
+    padding: 4px;
+}
+
+/* ---------------------------------------------------------------
+   TOOLBARS — COMPACT LAYOUT
+   --------------------------------------------------------------- */
+toolbar {
+    background-color: #f3f0ea;
+    border-bottom: 1px solid rgba(0 0 0 / 12%);
+    padding: 4px;
+    
+    -GtkToolbar-style: MENU;  /* Flat buttons by default */
+}
+
+toolbar > separator {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+/* ---------------------------------------------------------------
+   STATUS BAR & FOOTERS — FLAT, COMPACT
+   --------------------------------------------------------------- */
+.statusbar {
+    background-color: #ebe7df;
+    border-top: 1px solid rgba(0 0 0 / 12%);
+    padding: 3px 8px;
+}
+
+/* ---------------------------------------------------------------
+   CHECKBOXES & RADIO — COMPACT SIZE
+   --------------------------------------------------------------- */
+checkbutton, radiobutton {
+    padding: 3px 6px;
+    min-height: 24px;
+}
+
+checkbutton indicator,
+radiobutton indicator {
+    min-width: 16px;
+    min-height: 16px;
+    border-radius: 0;
+}
+
+/* ---------------------------------------------------------------
+   TOOLTIPS — FLAT, COMPACT
+   --------------------------------------------------------------- */
+tooltip {
+    padding: 4px 8px;
+    background-color: rgba(30 29 35 / 0.9);
+    color: #f2f0ee;
+    border-radius: 2px;
+}
+
+tooltip.background {
+    background-color: rgba(30 29 35 / 0.9);
+    border-radius: 2px;
+}
+
+/* ---------------------------------------------------------------
+   PROGRESS BARS — MINIMAL, SHARP
+   --------------------------------------------------------------- */
+progressbar trough {
+    background-color: rgba(0 0 0 / 10%);
+    border-radius: 2px;
+    min-height: 8px;
+    min-width: 100px;
+}
+
+progressbar progress {
+    background-color: #e8590c;
+    border-radius: 2px;
+}
+
+/* ---------------------------------------------------------------
+   SIDEBAR — COMPACT LISTING
+   --------------------------------------------------------------- */
+.sidebar, .navigation-sidebar {
+    background-color: #eae6dc;
+    border-right: 1px solid rgba(0 0 0 / 12%);
+}
+
+.sidebar > stack > scrolledwindow {
+    padding: 4px;
+}
+
+/* ---------------------------------------------------------------
+   STACK SWITCHER & TABS — FLAT EDGES
+   --------------------------------------------------------------- */
+stackswitcher {
+    margin: 4px 0;
+}
+
+stackswitcher button {
+    border-radius: 2px;
+    margin: 2px;
+    padding: 3px 8px;
+}
+
+/* ---------------------------------------------------------------
+   LIST BOX — COMPACT ROWS
+   --------------------------------------------------------------- */
+listview, listrow {
+    background-color: transparent;
+}
+
+listview row {
+    min-height: 28px;
+    padding: 4px 6px;
+    border-bottom: 1px solid rgba(0 0 0 / 8%);
+}
+
+/* ---------------------------------------------------------------
+   SPINNER (LOADING) — COMPACT SIZE
+   --------------------------------------------------------------- */
+spinner {
+    min-width: 20px;
+    min-height: 20px;
+}
+
+/* ---------------------------------------------------------------
+   MISC — SPACE AESTHETIC DETAILS
+   --------------------------------------------------------------- */
+
+/* Subtle separator lines */
+separator {
+    background-color: rgba(0 0 0 / 12%);
+    min-height: 1px;
+    min-width: 1px;
+}
+
+/* Compact dialog layout */
+dialog > box > buttonbox > button {
+    margin: 3px;
+    padding: 4px 12px;
+}
+
+/* Remove heavy shadows from floating panels */
+window.background.popup {
+    box-shadow: none;
+}
+
+/* Tighten split view margins */
+paned > separator {
+    min-width: 6px;
+    min-height: 6px;
+    margin: 0;
+    background-color: transparent;
+}

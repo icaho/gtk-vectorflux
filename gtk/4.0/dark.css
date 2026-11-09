@@ -1,0 +1,68 @@
+/* =============================================================================
+   VectorFlux — Dark Theme (70s/80s Space Aesthetic)
+   Deep space blacks, warm instrument panel accents, compact geometry
+   ============================================================================== */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Window colors — deep near-black with subtle warmth */
+        --window-bg-color: #15151a;
+        --window-fg-color: #ffffff;
+
+        /* View background — slightly warmer */
+        --view-bg-color: #1c1b20;
+        --view-fg-color: #f2f0ee;
+
+        /* Header bar — subtle separation from window */
+        --headerbar-bg-color: #1e1d23;
+        --headerbar-fg-color: #ffffff;
+        --headerbar-border-color: rgba(255 255 255 / 8%);
+        --headerbar-backdrop-color: #15151a;
+        --headerbar-shade-color: rgba(0 0 0 / 30%);
+        --headerbar-darker-shade-color: rgba(0 0 0 / 60%);
+
+        /* Sidebar — slightly lighter than window */
+        --sidebar-bg-color: #1a1a1f;
+        --sidebar-fg-color: #f2f0ee;
+        --sidebar-backdrop-color: #15151a;
+        --sidebar-border-color: rgba(0 0 0 / 35%);
+        --sidebar-shade-color: rgba(0 0 0 / 25%);
+
+        /* Secondary sidebar */
+        --secondary-sidebar-bg-color: #17161b;
+        --secondary-sidebar-fg-color: #e8e4dc;
+        --secondary-sidebar-backdrop-color: #1a1a1f;
+        --secondary-sidebar-border-color: rgba(0 0 0 / 35%);
+        --secondary-sidebar-shade-color: rgba(0 0 0 / 25%);
+
+        /* Card */
+        --card-bg-color: rgba(255 255 255 / 8%);
+        --card-fg-color: #f2f0ee;
+        --card-shade-color: rgba(0 0 0 / 35%);
+
+        /* Tab overview */
+        --overview-bg-color: #1a1a1f;
+        --overview-fg-color: #ffffff;
+        --thumbnail-bg-color: #2c2b32;
+        --thumbnail-fg-color: #f2f0ee;
+
+        /* Dialog & popover — deeper than window */
+        --dialog-bg-color: #24232a;
+        --dialog-fg-color: #ffffff;
+        --popover-bg-color: #2c2b32;
+        --popover-fg-color: #f2f0ee;
+        --popover-shade-color: rgba(0 0 0 / 25%);
+
+        /* Miscellaneous */
+        --shade-color: rgba(0 0 0 / 25%);
+        --scrollbar-outline-color: #15151a;
+
+        /* Compact space aesthetic — same sharp corners */
+        --window-radius: 3px;
+
+        /* Border opacity for dark mode */
+        --border-opacity: 40%;
+        --dim-opacity: 65%;
+        --disabled-opacity: 25%;
+    }
+}

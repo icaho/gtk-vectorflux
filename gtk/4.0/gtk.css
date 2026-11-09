@@ -1,0 +1,277 @@
+/* =============================================================================
+   VectorFlux — Main Entry Point
+   Retro Space GTK Theme (70s/80s Aesthetic)
+   Forked from Libadwaita: less rounded, more compact, sharp geometric forms
+   ============================================================================== */
+
+@import url("light.css");
+@import url("dark.css");
+
+/* ---------------------------------------------------------------
+   GLOBAL SPACING & LAYOUT — COMPACT VIBE
+   Reduce padding, margins, and gaps across all widgets
+   --------------------------------------------------------------- */
+* {
+    /* Tighter button inner padding */
+    -GtkButton-inner-border-scale-factor: 0.85;
+    
+    /* Compact icon button sizing */
+    -GtkButton-image-button-padding: 6px 4px;
+}
+
+/* Compact window content area spacing */
+window {
+    background-color: transparent;
+}
+
+/* Reduced margin for window content */
+window > decoration-area > box,
+window > decoration-area > stack {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+/* Tighten entry padding */
+entry, spinbutton {
+    padding: 4px 8px;
+}
+
+/* Compact list rows and action rows */
+row, actionrow, expanderrow, preferencessrow {
+    min-height: 28px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+/* Compact button sizes */
+button {
+    min-height: 24px;
+    padding: 3px 10px;
+}
+
+/* ---------------------------------------------------------------
+   SHARP CORNERS — REDUCED ROUNDING  
+   Libadwaita defaults to heavily rounded (15px); we go sharp
+   --------------------------------------------------------------- */
+
+/* Buttons: 2px radius for compact, angular look */
+button {
+    border-radius: 2px;
+}
+
+button.flat, button.destructive-action,
+button.suggested-action, button.circular {
+    border-radius: 2px;
+}
+
+button.circular {
+    min-width: 24px;
+    min-height: 24px;
+}
+
+/* Cards and boxes: slightly rounded but mostly sharp */
+.card, .boxed-list {
+    border-radius: 3px;
+}
+
+/* Popover / menu items: sharper edges */
+popover, menuitem, popover > box > stack > widget > box > list > row {
+    border-radius: 2px;
+}
+
+/* Entries and input fields: tight corners */
+entry {
+    border-radius: 2px;
+}
+
+/* Progress bars: minimal rounding */
+progressbar trough {
+    border-radius: 2px;
+}
+
+/* Scrollbars: sharp, utilitarian */
+scrollbar slider {
+    border-radius: 0px;
+    min-width: 8px;
+    min-height: 40px;
+}
+
+/* ---------------------------------------------------------------
+   HEADER BAR — FLAT, COMPACT LAYOUT
+   Reduce height and inner spacing for a more compact feel
+   --------------------------------------------------------------- */
+headerbar, .titlebar {
+    border-radius: 0px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+/* Tighter header bar controls */
+headerbar > box,
+headerbar > stack,
+headerbar > revealer > box {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+/* ---------------------------------------------------------------
+   TAB BAR — FLAT EDGES, COMPACT HEIGHT  
+   --------------------------------------------------------------- */
+tabbar tab, tabview tab-strip {
+    border-radius: 0px;
+}
+
+/* Tab buttons: sharp rectangles */
+tabbutton, tab {
+    border-radius: 2px;
+}
+
+/* ---------------------------------------------------------------
+   BUTTON STATES & SHADOWS — SUBTLE FEEDBACK
+   Less glow, more flat geometric contrast
+   --------------------------------------------------------------- */
+
+/* Flat button hover: simple background change, no glow */
+button.flat:hover {
+    box-shadow: none;
+    transition-duration: 0.1s;
+}
+
+/* Suggested action buttons: subtle shadow on hover only */
+button.suggested-action {
+    box-shadow: none;
+}
+
+button.suggested-action:hover {
+    box-shadow: 0 1px 2px rgba(0 0 0 / 20%);
+}
+
+/* Destructive buttons: flat until hovered */
+button.destructive-action {
+    box-shadow: none;
+}
+
+button.destructive-action:hover {
+    box-shadow: 0 1px 2px rgba(0 0 0 / 25%);
+}
+
+/* ---------------------------------------------------------------
+   SCROLLBARS — THIN, COMPACT, SHARP  
+   Thinner default for a cleaner look
+   --------------------------------------------------------------- */
+scrollbar.vertical slider {
+    min-width: 6px;
+    margin: 2px;
+}
+
+scrollbar.horizontal slider {
+    min-height: 6px;
+    margin: 2px;
+}
+
+/* Thin scrollbar tracks */
+scrollbar > box > button,
+scrollbar > box > button:hover {
+    background-color: transparent;
+    border: none;
+    min-width: 0px;
+    min-height: 0px;
+    padding: 0px;
+}
+
+/* ---------------------------------------------------------------
+   TREE VIEW & LISTS — COMPACT ROWS
+   --------------------------------------------------------------- */
+treeview, listview {
+    -TreeView-row-separator-height: 0px;
+}
+
+row > box {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+/* ---------------------------------------------------------------
+   LABELS & TYPOGRAPHY — TIGHTER LINE HEIGHT
+   --------------------------------------------------------------- */
+label, .body, .document, .heading {
+    -GtkWidget-text-handle-width: 18px;
+}
+
+/* Compact document / body text spacing */
+.label-spaced {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+/* ---------------------------------------------------------------
+   STATUS PAGE — MORE COMPACT
+   --------------------------------------------------------------- */
+statuspage {
+    margin: 16px;
+}
+
+/* ---------------------------------------------------------------
+   SPLIT VIEW SIDEBAR — TIGHTER BORDERS
+   --------------------------------------------------------------- */
+splitview > separator,
+oversplitview > separator {
+    min-width: 1px;
+    padding: 0px;
+}
+
+/* ---------------------------------------------------------------
+   TOOLTIP — COMPACT, FLAT
+   --------------------------------------------------------------- */
+tooltip {
+    border-radius: 2px;
+    padding: 4px 8px;
+}
+
+/* Remove heavy shadow from tooltips */
+tooltip background {
+    box-shadow: none;
+}
+
+/* ---------------------------------------------------------------
+   MISC — SPACE AESTHETIC DETAILS
+   Subtle retro touches throughout
+   --------------------------------------------------------------- */
+
+/* Window border: sharp edge, no extra rounding */
+window.background {
+    border-radius: 0px;
+}
+
+/* Remove deep shadows from floating panels */
+popover.background {
+    box-shadow: none;
+}
+
+/* Flat header separator lines */
+separator {
+    background-color: transparent;
+    min-width: 1px;
+    min-height: 1px;
+}
+
+/* Compact search bar styling */
+.searchbar > revealer > box {
+    padding-bottom: 4px;
+    margin-bottom: 0px;
+}
+
+/* Tighter split view margins */
+paned > separator {
+    min-width: 6px;
+    min-height: 6px;
+    margin: 0px;
+}
+
+/* Compact dialog buttons */
+dialog > box > buttonbox > button {
+    margin: 2px;
+    padding: 4px 12px;
+}

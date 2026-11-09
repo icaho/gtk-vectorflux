@@ -1,0 +1,42 @@
+{
+  "name": "VectorFlux",
+  "version": "1.0.0",
+  "description": "Cyberpunk retro space GTK theme — sharp geometry, compact layout, warm instrument panel accents",
+  "author": "",
+  "license": "GPL-2.0+",
+  "accent_primary": "#e8590c",
+  "dark_mode": true,
+  "gtk_versions": ["gtk4", "gtk3", "gtk2"],
+  "light_mode": {
+    "window_bg": "#f3f0ea",
+    "view_bg": "#ffffff",
+    "headerbar_bg": "#ebe7df",
+    "sidebar_bg": "#eae6dc",
+    "card_bg": "#ffffff",
+    "popovers_bg": "#ffffff"
+  },
+  "dark_mode_colors": {
+    "window_bg": "#15151a",
+    "view_bg": "#1c1b20",
+    "headerbar_bg": "#1e1d23",
+    "sidebar_bg": "#1a1a1f",
+    "card_bg": "rgba(255 255 255 / 8%)",
+    "popovers_bg": "#2c2b32"
+  },
+  "palette_1_to_5": {
+    "blue":  ["#cddaf0", "#9bbce3", "#4a90d9", "#3777c4", "#265bac"],
+    "teal":  ["#b8eef1", "#6adbe3", "#2ba8b5", "#1f90a0", "#147685"],
+    "green": ["#c2efda", "#7bdca5", "#3da868", "#30995b", "#1f7a46"],
+    "yellow":["#fcefb0", "#f8db6e", "#e8b82d", "#d5a022", "#bc831c"],
+    "orange":["#ffc08a", "#ffa04f", "#e8590c", "#cd4600", "#a93500"],
+    "red":   ["#fccfc9", "#f79b90", "#dc4c3f", "#c23530", "#a12425"],
+    "pink":  ["#f8cfe3", "#f09dbe", "#d46aa0", "#b74b80", "#963564"],
+    "purple":["#e7cbe8", "#c690da", "#9752b6", "#7d3fa0", "#612f7f"]
+  },
+  "design_notes": {
+    "border_radius": "2-3px (Libadwaita default is 15px)",
+    "button_padding": "compact, 6px vertical / 10px horizontal minimum",
+    "scrollbar_width": "6px thin",
+    "style": "flat surfaces, minimal shadows, geometric"
+  }
+}
