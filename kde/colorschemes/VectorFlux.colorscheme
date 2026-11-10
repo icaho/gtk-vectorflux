@@ -1,0 +1,115 @@
+[ColorScheme]
+Name=VectorFlux
+Comment=Cyberpunk retro space GTK theme — sharp geometry, compact layout
+Author=mattthorpe@icaho (icaho)
+
+# ═══════════════════════════════════════════════════
+# VectorFlux Palette Summary
+#   Accent: #e8590c (warm instrument-panel orange)
+#   Window light: #f3f0ea    dark: #15151a
+#   Header bar light: #ebe7df   dark: #1e1d23
+# ═══════════════════════════════════════════════════
+
+[ColorEffects:Disabled]
+Color=8a8986
+ColorAlpha=44
+Shadow=CDDAF0D
+
+# ── Window (title bar, menubar) ─────────────────────────
+[Colors:Window]
+BackgroundNormal=f3f0ea
+ForegroundPrimary=1c1c1e
+ForegroundSecondary=6b6a68
+ForegroundInactive=9a9996
+ForegroundLinked=e8590C
+ForegroundActive=4a90d9
+ForegroundVisited=d46aa0
+
+[Colors:Window Dark]
+BackgroundNormal=15151a
+ForegroundPrimary=f2f0ee
+ForegroundSecondary=bcb9b6
+ForegroundInactive=8a8986
+ForegroundLinked=e8590C
+ForegroundActive=4a90d9
+ForegroundVisited=d46aa0
+
+# ── Button (buttons, toolbar buttons) ────────────────────
+[Colors:Button]
+BackgroundNormal=f3f0ea
+BackgroundNormalAlt=eae6dc
+ForegroundPrimary=1c1c1e
+ForegroundSecondary=6b6a68
+ForegroundInactive=9a9996
+ForegroundLinked=e8590C
+
+[Colors:Button Dark]
+BackgroundNormal=1a191e
+ForegroundPrimary=f2f0ee
+ForegroundSecondary=bcb9b6
+ForegroundInactive=8a8986
+ForegroundLinked=e8590C
+
+# ── View (text view, code editor, treeview) ──────────────
+[Colors:View]
+BackgroundNormal=ffffff
+ForegroundPrimary=2d2d30
+ForegroundSecondary=6b6a68
+ForegroundInactive=9a9996
+ForegroundLinked=e8590C
+
+[Colors:View Dark]
+BackgroundNormal=1c1b20
+ForegroundPrimary=f2f0ee
+ForegroundSecondary=bcb9b6
+ForegroundInactive=8a8986
+ForegroundLinked=e8590C
+
+# ── Header (header bar, title bar) ───────────────────────
+[Colors:Header]
+BackgroundNormal=ebe7df
+ForegroundPrimary=1c1c1e
+ForegroundSecondary=6b6a68
+ForegroundInactive=9a9996
+ForegroundLinked=e8590C
+
+[Colors:Header Dark]
+BackgroundNormal=1e1d23
+ForegroundPrimary=f2f0ee
+ForegroundSecondary=bcb9b6
+ForegroundInactive=8a8986
+ForegroundLinked=e8590C
+
+# ── Selection (selected text, focused widgets) ───────────
+[Colors:Selection]
+BackgroundNormal=e8590C
+ForegroundPrimary=ffffff
+BackgroundHover=f06a1e
+
+[Colors:Selection Dark]
+BackgroundNormal=e8590C
+ForegroundPrimary=ffffff
+BackgroundHover=f06a1e
+
+# ── Tooltip (popups, hints) ──────────────────────────────
+[Colors:Tooltip]
+BackgroundNormal=28272d
+ForegroundPrimary=f2f0ee
+ForegroundSecondary=bcb9b6
+
+# ── Decoration / window frames ───────────────────────────
+[Colors:Decoration]
+BackgroundNormal=ebe7df
+ForegroundPrimary=1c1c1e
+BackgroundHover=f3f0ea
+
+[Colors:Decoration Dark]
+BackgroundNormal=1e1d23
+ForegroundPrimary=f2f0ee
+BackgroundHover=15151a
+
+# ── Focus ring / emphasis ────────────────────────────────
+[Colors:Focus]
+BackgroundNormal=e8590C
+ForegroundPrimary=ffffff
+

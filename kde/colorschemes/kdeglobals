@@ -1,0 +1,34 @@
+[Colors:Base]
+backgroundNormal=f3f0ea
+foregroundPrimary=1c1c1e
+foregroundInactive=9a9996
+
+[Colors:Base Dark]
+backgroundNormal=15151a
+foregroundPrimary=f2f0ee
+foregroundInactive=8a8986
+
+[Colors:Button]
+backgroundNormal=eae6dc
+backgroundHover=f0ede4
+foregroundPrimary=1c1c1e
+foregroundActive=e8590C
+
+[Colors:Button Dark]
+backgroundNormal=2c2b32
+backgroundHover=39383f
+foregroundPrimary=f2f0ee
+foregroundActive=e8590C
+
+[Colors:Header]
+backgroundNormal=ebe7df
+foregroundPrimary=1c1c1e
+foregroundSecondary=6b6a68
+backgroundHover=ddd9cf
+
+[Colors:Header Dark]
+backgroundNormal=1e1d23
+foregroundPrimary=f2f0ee
+foregroundSecondary=bcb9b6
+backgroundHover=242329
+
